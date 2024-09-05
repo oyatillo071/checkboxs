@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 100px auto;
+}
+.margin-bottom{
+    margin-bottom: 100px;
+}
+.overflow{
+
+    width: 300px;
+    background-color: aqua;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 100px;
+}
+.overflow-second{
+    width: 400px;
+    background-color:blue;
+    color: white;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 100px;
+}
+.mask{
+    -webkit-mask-image:url(../images/w3logo.png);
+    mask-repeat: no-repeat;
+    
+}
+.mask2 p{
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+}
+.mask2{
+    max-width: 500px;
+    height: 300px;
+    overflow-y: scroll;
+    background: url(../images/bridge.jpg) no-repeat;
+
+    -webkit-mask-image:linear-gradient(black,transparent);
+    mask-image: linear-gradient(black,transparent);
+    
+
+}
+.wrapper{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#check{
+    appearance: none;
+    width: 80px;
+    height: 40px;
+    background-color: grey;
+    border-radius: 20px;
+    position: relative;
+    transition: all 1s;
+}
+#check::before{
+    content: '';
+    width:38px;
+    height: 35px;
+    background-color:white;
+    position: absolute;
+    border-radius:50%;
+    top:2px;
+    left: 2px;
+    transition: all 1s;
+}
+#check:checked{
+    background-color:blue;
+}
+#check:checked::before{
+    left: 38px;
+}
+
+
+
+
+#check2{
+    appearance: none;
+    width: 40px;
+    height: 80px;
+    background-color: gray;
+    position: relative;
+    transition: all 1s;
+}
+#check2::before{
+    content: '';
+    width:35px;
+    height: 35px;
+    background-color:white;
+    position: absolute;
+    top:2px;
+    left: 2px;
+    transition: all 1s;
+}
+#check2:checked{
+    background-color:blue;
+}
+#check2:checked::before{
+    top: 40px;
+}
